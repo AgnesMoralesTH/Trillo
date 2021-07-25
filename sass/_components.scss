@@ -1,15 +1,55 @@
 .logo{
     height: 3.25rem;
+    margin-left: 3rem;
 }
 
 /////////////////////////
 //SEARCH
 .search{
+    flex: 0 0 40%;
+
+    display: flex;
+    //al centers along cross axis
+    align-items: center;
+    //jc centers along main axis
+    justify-content: center;
     &__input{
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.5rem;
+
+        &:focus{
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-2);
+        }
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            counter-reset: var(--color-grey-light-4);
+        }
+    }
+    &__input:focus + &__button{
+        background-color: var(--color-grey-light-2);
 
     }
-    &__button{
 
+    &__button{
+        border: none;
+        background-color: var(--color-grey-light-2) ;
+
+        &:focus{
+            outline: none;
+        }
+        &:active{
+            transform: translateY(2px);
+        }
     }
     &__notification{
 
@@ -18,12 +58,14 @@
     &__icon{
         height:2rem;
         width: 2rem;
+        fill: var(--color-grey-dark-3);
     }
 }
 
 /////////////////////////
 //USER- Navigation
 .user-nav{
+    display: flex;
     &__icon-box{
 
     }
